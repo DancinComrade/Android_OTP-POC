@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(homePage);
             }
         });
-
+        DBHandler db = new DBHandler(this);
+        // ContentValues will protect against SQL Injection
+        db.insertAccount(userObj);
     }
 }
